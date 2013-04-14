@@ -6,7 +6,7 @@ window.TMultiWriter = function( n, ld, times, callback, bgColIdx ) {
     var createTimeout = function() {
       t = setTimeout( "window.tmp001.performOneWrite()", 250 );
     }
-
+    //rakstît random skaitïus
     this.performOneWrite = function() {
       var rnd = Utils.genRandomTwoBytes();
       rnd = rnd * 16 + bgColIdx;

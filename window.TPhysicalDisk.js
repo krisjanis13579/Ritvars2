@@ -48,7 +48,7 @@ window.TPhysicalDisk = function( uid, blockCnt ) {
     this.extractColor = function( n ) {
         return rawData[ n ] % 16;
     }
-
+    //raksta vienu bloku 
     this.writeBlock = function( n, newValue ) {
        if ( diskDead ) alert( "fatal: writing in dead disk" );
        rawData[ n ] = newValue;
@@ -56,7 +56,7 @@ window.TPhysicalDisk = function( uid, blockCnt ) {
 
        return self;
     }
-
+   //attçlo disku
     this.render = function( argContainerId, argTbId ) {
         containerId = argContainerId;
         tbId = argTbId;
@@ -78,7 +78,7 @@ window.TPhysicalDisk = function( uid, blockCnt ) {
         o.tbId = tbId;
         return o;
     }
-
+     //uzliek un attçlo virsrakstu diskiem
     this.setTitleAndRender = function( argTitle ) {
         title = argTitle;
         document.getElementById( tbId ).innerHTML = title;
@@ -90,7 +90,7 @@ window.TPhysicalDisk = function( uid, blockCnt ) {
       document.getElementById( uid + n ).innerHTML =  visibleData[ n ];
       if ( selectedBlockNo != n && !parityBlock) setBgNoRegIdx( n, self.extractColor( n ) );
     }
-
+  //uzliek css klasi
   this.setCssClass = function( blockNo, cssClass ) {
     var cell = document.getElementById( uid + blockNo );
     cell.className = cssClass;
