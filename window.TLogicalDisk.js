@@ -23,7 +23,7 @@ window.TLogicalDisk = function( uid, stripeWidth, physicalDisks ) {
     blockCntPerDisk = physicalDisks[0].getBlockCnt();
     var tmp;
     for (var i=0; i<diskCnt; i++) {
-        physicalDisks[i].setTitleAndRender("phy disk #" + i);
+        physicalDisks[i].setTitleAndRender("Fiziskais disks: " + i);
 
         tmp = physicalDisks[i].getBlockCnt();
         if ( tmp < blockCntPerDisk ) blockCntPerDisk = tmp;
@@ -265,7 +265,6 @@ window.TLogicalDisk = function( uid, stripeWidth, physicalDisks ) {
       }
     }
 
-    //alert( visibleData );
 
     //render
     for (i=0; i<logicalBlockCnt; i++) {
@@ -307,7 +306,7 @@ window.TLogicalDisk = function( uid, stripeWidth, physicalDisks ) {
         physicalDisks[ diskNo ].render(renderArgs.containerId, renderArgs.tbId);
         renderDiskStripes(diskNo);
         
-        btnObj.innerHTML = "Aizvietot #" + diskNo;
+        btnObj.innerHTML = "Aizvietot: " + diskNo;
         deadDiskCnt++;
         if (deadDiskCnt>1) markRaidAsDead();
     }
@@ -340,7 +339,7 @@ window.TLogicalDisk = function( uid, stripeWidth, physicalDisks ) {
     var tableHtml;
 
     // ziimee pashu logjisko disku >>
-    tableHtml = '<table style="width: 100px;" class="disk_map log_disk_map" align="center" cellpadding="0" cellspacing="0" id="' + tableId + '">';
+    tableHtml = '<table style="width: 70px;" class="disk_map log_disk_map" align="center" cellpadding="0" cellspacing="0" id="' + tableId + '">';
 
     for (i=0; i<logicalBlockCnt; i++) {
       tableHtml += '<tr><td';
@@ -392,7 +391,7 @@ window.TLogicalDisk = function( uid, stripeWidth, physicalDisks ) {
     //
     tableHtml = "";
     for (i=0; i<diskCnt; i++) {
-        tableHtml += '<button class="cp_btn" id="' + (uid + "des_reb_btn_" + i) + '">Iznīcināt #' +i+ '</button>';
+        tableHtml += '<button class="cp_btn" id="' + (uid + "des_reb_btn_" + i) + '">Iznīcināt: ' +i+ '</button>';
     }
     
 
