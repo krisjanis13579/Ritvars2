@@ -7,7 +7,7 @@ window.Utils = {
       arr[i] = fillValue;
     }
   },
-
+  //paziòojums
   alert: function( x ) {
     window.alert( x );
   },
@@ -15,7 +15,7 @@ window.Utils = {
   div: function( a, b ) {
     return Math.floor( a/b );
   },
-
+ //pârvçrst uz hex
   toHex: function( n, minW ) {
     var h = n.toString( 16 ).toUpperCase();
     if ( h.length < minW ) {
@@ -24,12 +24,12 @@ window.Utils = {
 
     return h;
   },
-
+  //dabût randomus baitus
   genRandomTwoBytes: function() {
     var rndNum = Math.floor( Math.random() * 65536 );
     return rndNum;
   },
-
+  //pârvçrst no HEX
   fromHex: function( hexNum ) {
     return parseInt(hexNum, 16);
   },

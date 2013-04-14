@@ -234,7 +234,7 @@ window.TLogicalDisk = function( uid, stripeWidth, physicalDisks ) {
   }
 
   this.attachReplacementDisk = function( diskNo, diskSz ) {
-    physicalDisks[ diskNo ].destroy( "phy disk #" + diskNo );
+    physicalDisks[ diskNo ].destroy( "Fiziskais disks: " + diskNo );
     var renderArgs = physicalDisks[ diskNo ].backupRenderData();
 
     physicalDisks[ diskNo ] = null;
